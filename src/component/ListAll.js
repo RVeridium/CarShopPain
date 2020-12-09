@@ -51,20 +51,12 @@ export default function ListAll() {
         .catch(err => console.log(err));
     };
 
-    
-
-
-    
-
-
-    
-
     const columns=[{headerName: "Brand", field: "brand", sortable:true, filter:true}, 
         {headerName: "Model", field: "model"}, {headerName: "Color", field: "color"}, 
         {headerName: "Fuel", field: "fuel", sortable:true, filter:true}, 
         {headerName: "Year", field: "year", sortable:true, filter:true}, 
         {headerName: "Price", field: "price", sortable:true, filter:true},
-        {headerName: 'Edit', field: 'id', cellRenderer: 'editButton', cellRendererParams: {func: updateCar}, colId: 'params'},//miten tää edes toimii????
+        {headerName: 'Edit', field: 'id', cellRenderer: 'editButton', cellRendererParams: {func: updateCar}, colId: 'params'},//unsure why it works. 
         {headerName: "Delete", field: '_links.self.href', cellRenderer: 'buttonOut', colId:'params'}]; 
     
 
